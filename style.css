@@ -60,7 +60,7 @@ h1 {
     padding: 10px 0;
 }
 
-span {
+p > span {
     display: block;
 }
 
@@ -110,6 +110,18 @@ input {
     width: 220px;
 }
 
+input + span {
+    position: relative;
+}
+
+input + span::before {
+    position: absolute;
+    top: 28px;
+    right: 83px;
+    font-size: 0.75rem;
+    width: max-content;
+}
+
 input:focus {
     outline:none;
     border: 1px solid #5286ed;
@@ -118,6 +130,11 @@ input:focus {
 
 input[type='password']:invalid {
     border: 1px solid #B91C1C;
+}
+
+input[type='password']:invalid + span::before {
+    content: '*Passwords do not match';
+    color: #B91C1C;
 }
 
 .account {
