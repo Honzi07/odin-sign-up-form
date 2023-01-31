@@ -60,7 +60,7 @@ h1 {
     padding: 10px 0;
 }
 
-p > span {
+span {
     display: block;
 }
 
@@ -86,9 +86,38 @@ button {
 }
 
 label {
+    color: #464646;
+    display: block;
     font-size: 0.75rem;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 500px;
+}
+
+input {
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    padding: 7px;
+    margin-bottom: 30px;
+    width: 220px;
+}
+
+input:focus {
+    outline:none;
+    border: 1px solid #5286ed;
+    box-shadow: 1px 2px 6px 1px #c9c9c9;
+}
+
+input[type='password']:invalid {
+    border: 1px solid #B91C1C;
 }
 
 .account {
@@ -96,21 +125,22 @@ label {
     margin-left: 40px;
 }
 
-.account > button {
+button {
     background-color: #596D48;
     color: white;
     padding: 15px 50px;
     border: 0;
     border-radius:5px;
     box-shadow: 1px 3px 5px 0px #a4a4a4;
+    margin: 10px 0 20px;
+}
+
+button:hover {
+    background-color: #6b8557;
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
     color: #596D48;
-}
-
-button:hover {
-    background-color: #6d8658;
-    cursor: pointer;
 }
