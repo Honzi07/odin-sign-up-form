@@ -102,6 +102,7 @@ form {
 }
 
 input {
+    appearance: none;
     background-color: #F9FAFB;
     border: 1px solid #E5E7EB;
     border-radius: 3px;
@@ -125,14 +126,14 @@ input + span::before {
 input:focus {
     outline:none;
     border: 1px solid #5286ed;
-    box-shadow: 1px 2px 6px 1px #c9c9c9;
+    box-shadow: 2px 2px 4px 1px #c9c9c9;
 }
 
-input[type='password']:invalid {
+input[type='password'].invalid {
     border: 1px solid #B91C1C;
 }
 
-input[type='password']:invalid + span::before {
+input[type='password'].invalid + span::before {
     content: '*Passwords do not match';
     color: #B91C1C;
 }
