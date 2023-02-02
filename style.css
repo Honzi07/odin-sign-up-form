@@ -185,3 +185,32 @@ button:hover {
     text-decoration: none;
     color: #596D48;
 }
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+    .image {
+        padding-top: 100px;
+        width: auto;
+    }
+    .credit {
+        padding-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .form-section,
+    form,
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-section {
+        padding: 1px 0 20px 0px;
+    }
+    .account {
+        margin-left: 0;
+    }
+}
